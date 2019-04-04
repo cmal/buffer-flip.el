@@ -108,3 +108,16 @@ See `buffer-flip-mode' for more information."
 
 (provide 'buffer-flip)
 ;;; buffer-flip.el ends here
+
+;; maybe use M-<tab><tab><tab> to switch forward or backward
+;; and cycle through buffers
+;; when Meta being up, and another M-<tab> being pressed, it
+;; switch from forward/backward to backward/forward
+
+(defun switch-to-previous-buffer ()
+  "Switch to previously open buffer.
+Repeated invocations toggle between the two most recently open buffers."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
+(global-set-key (kbd "M-<tab>") 'switch-to-previous-buffer)

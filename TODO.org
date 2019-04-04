@@ -1,0 +1,4 @@
+* Todos
+** TODO  remove keychord, simplify the package, change it to another package using one kbd to switch buffers forward and backward.                      <2016-11-24 Thu 00:22>
+
+  Link: file:~/gits/buffer-flip.el/.git
